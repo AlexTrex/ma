@@ -30,7 +30,7 @@ def get_values():
     return values
 
 data = None
-with open('my.json') as file:
+with open('my.json', encoding="utf-8") as file:
   data = json.load(file)
 # https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update
 resp = sheet.values().update(
